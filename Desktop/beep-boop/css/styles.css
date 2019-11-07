@@ -1,0 +1,56 @@
+body{
+  background-color: #c3c3c3;
+  font-weight: 600;
+}
+
+.content {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color:rgb(79, 236, 233);
+  border-radius:15px;rgb(187, 181, 183);
+  border: 3px solid grey;
+  margin-top: 20px;
+  box-shadow: 5px 10px #888888;
+  text-align: center;
+}
+
+form{
+  background-color:rgb(79, 236, 233);
+  border-radius:15px;rgb(187, 181, 183);
+  border: 3px solid grey;
+  width: 49.2%;
+  display:inline-block;
+  float:left;
+  padding:10px;
+  box-shadow: 5px 10px #888888
+}
+
+#resultsbox {
+  background-color:rgb(79, 236, 233);
+  border-radius:15px;rgb(187, 181, 183);
+  border: 3px solid grey;
+  width: 49%;
+  padding:10px;
+  float:right;
+  box-shadow: 5px 10px #888888
+}
+
+#userResults{
+  word-break: break-all;
+  letter-spacing: 2px;
+  color: rgba(66, 65, 68, 0.81);
+}
+
+input {
+  width:100%;
+}
+
+button {
+  width:100%;
+}
+
+p {
+  text-align: center;
+}
