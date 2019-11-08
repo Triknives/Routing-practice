@@ -5,17 +5,16 @@ function Pizza(topping, size) {
 }
 // Logic
 Pizza.prototype.getPrice = function(topping) {
-
-  for(var i = 0; i < this.topping.length; i++){
+  for(var i = 0; i <= this.topping.length; i++){
     this.price += 1;
-    console.log(this.price);
-
+  }
   if(this.size === "big"){
     this.price += 20;
   }
   if(this.size === "small"){
     this.price += 10;
   }
+    console.log(this.price);
     return this.price;
 };
 
@@ -27,18 +26,16 @@ $(document).ready(function(){
     let toppingInput = $("input:checkbox[name=topping]:checked");
     let toppingArray = [];
     let size = $("#size").val();
+    toppingInput.each(function(){
+      toppingArray.push($(this).val());
 
-
-    toppingsInput.each(function(){
-      toppingsArray.push($(this).val());
+      let myPizza = new Pizza (toppingArray, size);
+      let price = myPizza.getPrice();
+      $('#userOrder').append(toppingInput + "<br>");
     })
 
-    let myPizza = new Pizza (toppingArray, size);
-    let price = myPizza.getPrice();
 
-    $('#userOrder').append(toppingInput + "<br>");
     $('#toppingsForm').hide();
 
   })
 });
-}
