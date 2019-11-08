@@ -14,7 +14,8 @@ Pizza.prototype.getPrice = function(topping) {
   if(this.size === "small"){
     this.price += 10;
   }
-    console.log(this.price);
+  else
+  console.log(this.price);
     return this.price;
 };
 
@@ -26,13 +27,15 @@ $(document).ready(function(){
     let toppingInput = $("input:checkbox[name=topping]:checked");
     let toppingArray = [];
     let size = $("#size").val();
+
     toppingInput.each(function(){
       toppingArray.push($(this).val());
-
+    })
       let myPizza = new Pizza (toppingArray, size);
       let price = myPizza.getPrice();
-      $('#userOrder').append(toppingInput + "<br>");
-    })
+      console.log(price);
+      $('#userOrder').append(toppingArray + "</br>");
+
 
 
     $('#toppingsForm').hide();
