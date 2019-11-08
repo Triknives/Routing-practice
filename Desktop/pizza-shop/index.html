@@ -14,10 +14,15 @@
       <h1>Portland Pizza Pop-Up!</h1>
     </div>
     <form id="toppingsForm">
-      <div class="userChoices">
-        <h3>What size do you want this bad boi?</h3>
-        <input type="checkbox" name="size" value="Bigboi">   Bigboi - 24 inche masterpiece.<br>
-        <input type="checkbox" name="size" value="SmallBoi"> SmallBoi - 12 inche pizza.<br>
+      <div class="size">
+        <select class="form-control" id="size">
+          <h3>What size do you want this bad boi?</h3>
+          <option>24</option>
+          <option>12</option>
+        </select>
+      </div>
+      <br>
+      <div class="toppingsChoice">
         <h3>Meats</h3>
         <input type="checkbox" name="topping" value="Sausage">  Sausage<br>
         <input type="checkbox" name="topping" value="Bacon">   Bacon<br>
@@ -26,10 +31,12 @@
         <input type="checkbox" name="topping" value="Red Sauce"> Red Sauce<br>
         <input type="checkbox" name="topping" value="White Sauce"> White Sauce<br>
       </div>
+
       <br>
       <br>
       <button type="submit">Submit Order</button>
     </form>
+
     <br>
     <br>
     <h3>Your Order</h3>

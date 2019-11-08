@@ -5,15 +5,17 @@ function Pizza(topping, size) {
 }
 // Logic
 Pizza.prototype.getPrice = function() {
-  this.topping.forEach(function(topping){
+    topping.forEach(function(topping){
     this.price += 1;
-    if(this.size === "BigBoi"){
+    console.log(this.price);
+    if(this.size === "24"){
       this.price += 20;
     }
-    else if(this.size === "SmallBoi"){
+    else if(this.size === "12"){
       this.price += 10;
     }
     return this.price;
+    console.log(price);
   });
 };
 
@@ -23,9 +25,10 @@ Pizza.prototype.getPrice = function() {
 $(document).ready(function(){
   $("#toppingsForm").submit(function(event){
     event.preventDefault();
-    let toppingInput = $("input:checkbox[name=topping]:checked")
+    let toppingInput = $("input:checkbox[name=topping]:checked");
     let toppingArray = [];
-    let sizeInput = $("input:checkbox[name=size]:checked")
+    let sizeInput = $("#size").val();
+    console.log(sizeInput);
 
     toppingInput.each(function(){
       toppingArray.push($(this).val());
