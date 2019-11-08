@@ -1,13 +1,12 @@
-function Pizza(topping, price) {
+function Pizza(topping, size, price) {
   this.topping = topping;
   this.size = size;
   this.price = 0;
 }
 // Logic
 Pizza.prototype.getPrice = function() {
-  this.topping.forEach(function(topping, size){
+  this.topping.forEach(function(topping, size, price){
     this.price += 1;
-
     if(size === "BigBoi"){
       this.price += 20;
     }
@@ -24,9 +23,12 @@ Pizza.prototype.getPrice = function() {
 $(document).ready(function(){
   $("#toppingsForm").submit(function(event){
     event.preventDefault();
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      var toppingsInput = $(this).val();
-      $('#userOrder').append(toppingsInput + "<br>");
+    let toppingInput = $("input:checkbox[name=toppings]:checked");
+    let toppingArray = [];
+    let size = $("#size").val();
+    $(toppingInput).each(function(){
+      toppingArray.push($(this).val());
+      $('#userOrder').append(toppingArray);
     });
   });
 });
