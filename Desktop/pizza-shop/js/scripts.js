@@ -45,6 +45,8 @@ $(document).ready(function(){
 
     $("#pizzaSize").append(size);
     $("#orderTotal").text(price);
-    $('#toppingsForm').hide();
+    $("#toppingsForm").hide();
+    $("#orderReveal").show();
+
   })
 });

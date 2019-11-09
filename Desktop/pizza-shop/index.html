@@ -16,7 +16,7 @@
     <form id="toppingsForm">
 
       <div class="size">
-        <h3>What size do you want this bad boi?</h3>
+        <h4>What size do you want this bad boi?</h4>
         <select class="form-control" id="size">
           <option>Choose a size</option>
           <option>BigBoi</option>
@@ -27,25 +27,26 @@
       <br>
 
       <div class="toppingsChoice">
-        <h3>Meats</h3>
+        <h4>Meats</h4>
         <input type="checkbox" name="topping" value="Sausage">  Sausage<br>
         <input type="checkbox" name="topping" value="Bacon">   Bacon<br>
         <input type="checkbox" name="topping" value="Pepperoni">  Pepperoni<br>
-        <h3>Sauces</h3>
+        <h4>Sauces</h4>
         <input type="checkbox" name="topping" value="Red Sauce"> Red Sauce<br>
         <input type="checkbox" name="topping" value="White Sauce"> White Sauce<br>
       </div>
       <br>
       <button type="submit">Submit Order</button>
     </form>
-
-    <h3>Your Order</h3>
-    <span id="pizzaSize"><strong>Size:<br></strong></span>
-    <br>
-    <br>
-    <span id="userOrder"><strong>Toppings:</strong><br></span>
-    <h3>Order total</h3>
-    <span id="orderTotal"></span>
+    <div id="orderReveal">
+      <h2>Your Order</h2>
+      <h5><strong>Size:</strong></h5>
+      <h6><span id="pizzaSize"></span></h6>
+      <h5><strong>Toppings:</strong></h5>
+      <h6><span id="userOrder"></span></h6>
+      <h3>Order total</h3>
+      <h6><span id="orderTotal"></span>.00$</h6>
+    </div>
   </div>
 </body>
 </html>
