@@ -1,17 +1,18 @@
+// Declaring Object and Keys
 function Pizza(topping, size) {
   this.topping = topping;
   this.size = size;
   this.price = 0;
 }
-// Logic
+// Branch logic
 Pizza.prototype.getPrice = function(topping) {
   for(var i = 0; i <= this.topping.length; i++){
     this.price += 1;
   }
-  if(this.size === "big"){
+  if(this.size === "BigBoi"){
     this.price += 20;
   }
-  if(this.size === "small"){
+  if(this.size === "SmallBoi"){
     this.price += 10;
   }
   else
@@ -28,17 +29,22 @@ $(document).ready(function(){
     let toppingArray = [];
     let size = $("#size").val();
 
+
+
+    $("input:checkbox[name=topping]:checked").each(function(){
+      let userToppings = $(this).val();
+      $("#userOrder").append(userToppings + "<br>");
+    })
+
     toppingInput.each(function(){
       toppingArray.push($(this).val());
     })
-      let myPizza = new Pizza (toppingArray, size);
-      let price = myPizza.getPrice();
-      console.log(price);
-      $('#userOrder').append(toppingArray + "</br>");
 
+    let myPizza = new Pizza (toppingArray, size);
+    let price = myPizza.getPrice();
 
-
+    $("#pizzaSize").append(size);
+    $("#orderTotal").text(price);
     $('#toppingsForm').hide();
-
   })
 });
