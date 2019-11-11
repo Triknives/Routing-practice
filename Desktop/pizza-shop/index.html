@@ -13,7 +13,6 @@
     <div class="jumbotron">
       <h1>Portland Pizza Pop-Up!</h1>
     </div>
-    </div>
     <form id="toppingsForm">
 
       <div class="size">
@@ -37,19 +36,33 @@
       <br>
       <button type="submit">Submit Order</button>
     </form>
-    <div id="orderReveal">
-      <h2>Your Order</h2>
-      <h5><strong>Size:</strong></h5>
-      <h6><span id="pizzaSize"></span></h6>
-      <h5><strong>Toppings:</strong></h5>
-      <h6><span id="userOrder"></span></h6>
-      <h3>Order total</h3>
-      <h6><span id="orderTotal"></span>.00$</h6>
-      <br>
-      <div id="newOrder">
+  </div>
+
+
+  <div id="specials">
+    <img src="images/jpizza5.png" alt="Every Meat and Angus" id="megaMeatPizza">
+    <img src="images/jpizza2.png" alt="Angus Beef Pizza" id="angusPizza">
+    <br>
+    <img src="images/jpizza3.png" alt="Angus Beef with egg Pizza" id="angusEggPizza">
+    <img src="images/jpizza4.png" alt="Angus Beef with Bacon Pizza" id="angusBaconPizza">
+  </div>
+
+  <!-- Will be displayed after submission of order -->
+  <div id="orderReveal">
+    <h2>Your Order</h2>
+    <h5><strong>Size:</strong></h5>
+    <h6><span id="pizzaSize"></span></h6>
+    <h5><strong>Toppings:</strong></h5>
+    <h6><span id="userOrder"></span></h6>
+    <h3>Order total</h3>
+    <h6><span id="orderTotal"></span>.00$</h6>
+    <br>
+    <div id="newOrder">
+
+      <!-- pulled of stackOverFlow, refreshes the page to allow for new order creation -->
       <a onClick="window.location.reload()"><h6><strong>Start New Order</strong></h6></a>
-      </div>
     </div>
   </div>
+</div>
 </body>
 </html>

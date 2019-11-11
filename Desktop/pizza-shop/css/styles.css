@@ -1,22 +1,45 @@
+body{
+margin-left: 200px;
+margin-right: 200px;
+
+}
+.jumbotron {
+  text-align: center;
+
+  border-radius: 15px;
+}
+
 #orderReveal{
-  display:none;
   border: 2px grey solid;
   width: 370px;
   padding: 10px;
-  margin-left: 40px;
+  margin-left: 210px;
+  display:none;
 }
 
 #newOrder {
-color:blue;
+  color:blue;
 }
 
 #size {
-width:250px;
+  width:250px;
 }
 
 #toppingsForm {
   border: 2px grey solid;
   width: 370px;
   padding: 10px;
-  margin-left: 40px;
+  float:left;
+}
+
+#megaMeatPizza, #angusPizza, #angusBaconPizza {
+  width: 310px;
+  height: 160px;
+  margin: 5px;
+  float: left;
+}
+
+#angusEggPizza{
+  width: 330px;
+  height: 160px;
 }
