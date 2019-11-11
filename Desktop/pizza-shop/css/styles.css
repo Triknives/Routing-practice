@@ -1,7 +1,22 @@
 #orderReveal{
   display:none;
+  border: 2px grey solid;
+  width: 370px;
+  padding: 10px;
+  margin-left: 40px;
 }
 
 #newOrder {
 color:blue;
+}
+
+#size {
+width:250px;
+}
+
+#toppingsForm {
+  border: 2px grey solid;
+  width: 370px;
+  padding: 10px;
+  margin-left: 40px;
 }
