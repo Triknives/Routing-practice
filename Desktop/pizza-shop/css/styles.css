@@ -1,23 +1,30 @@
 body{
-background-color: rgb(245, 58, 47);
+  background-image: url("http://www.aiclakeforest.com/file/Seamless-Dark-Wood-Flooring-Texture.jpg");
+  color: white;
+  font-weight: 600;
+}
+
+#intro{
+  text-align: center;
+}
+#thankYou{
+  text-align: center;
+  font-weight: 600;
+  display:none;
 }
 
 .jumbotron {
   text-align: center;
   border-radius: 15px;
-  background-color: yellow;
+  background-color: rgb(168, 3, 3);
+  opacity: 85%;
 }
 
 #orderReveal{
-  border: 2px black solid;
   width: 370px;
   padding: 10px;
-  margin-left: 210px;
+  margin-left: 410px;
   display:none;
-}
-
-#newOrder {
-  color:blue;
 }
 
 #size {
@@ -25,9 +32,9 @@ background-color: rgb(245, 58, 47);
 }
 
 #toppingsForm {
-  border: 2px black solid;
   width: 370px;
   padding: 10px;
+  font-weight: 600;
   float:left;
 }
 

@@ -6,7 +6,7 @@ function Pizza(topping, size) {
 }
 // Branch logic
 Pizza.prototype.getPrice = function(topping) {
-  for(var i = 0; i <= this.topping.length; i++){
+  for(var i = 0; i < this.topping.length; i++){
     this.price += 1;
   }
   if(this.size === "BigBoi"){
@@ -47,7 +47,9 @@ $(document).ready(function(){
     $("#orderTotal").text(price);
     $("#toppingsForm").hide();
     $("#specials").hide();
+    $("#intro").hide();
     $("#orderReveal").show();
+    $("#thankYou").show();
 
   })
 });
